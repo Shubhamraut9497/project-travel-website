@@ -1,0 +1,70 @@
+.App {
+
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+} 
+.mini{
+  width:350px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  background-color: rgb(172, 168, 168);
+
+}
+#input1{
+  margin-top: 50px;
+}
+#input11{
+  margin-top: 50px;
+}
+#input2{
+  margin-top: 30px;
+  margin-left: 5px;
+}
+#input22{
+  margin-top: 30px;
+  margin-left: 5px;
+}
+input{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  padding-left: 20px;
+  border-bottom: 2px solid black;
+  border: none;
+}
+#btn{
+  margin-top: 30px;
+  width: 140px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+#btn2{
+  margin-top: 30px;
+  width: 140px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+#btn:hover{
+  background-color: white;
+  color: black;
+}
+#btn2:hover{
+  background-color: white;
+  color: black;
+}
