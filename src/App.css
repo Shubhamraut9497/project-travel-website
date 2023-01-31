@@ -1,5 +1,5 @@
 .App {
-
+  background-color: rgb(184, 252, 248);
   height:100vh;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   border-radius: 30px;
   text-align: center;
   background-color: rgb(172, 168, 168);
-
+  box-shadow: 0px 5px 5px 3px;
 }
 #input1{
   margin-top: 50px;
