@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const SignUp = () => {
   const [Name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ const SignUp = () => {
             id="input11"
             value={Name}
             onChange={handleName}
-            style={{ marginLeft: "10px" }}
+            style={{ marginLeft: "20px" }}
           />
           <br></br>
           <label for="input2">Email Id : </label>
@@ -35,6 +36,7 @@ const SignUp = () => {
             type="email"
             placeholder="email Id"
             id="input22"
+            style={{ marginLeft: "10px" }}
             value={email}
             onChange={handleEmail}
           />
@@ -47,7 +49,7 @@ const SignUp = () => {
             onChange={handlePassword2}
           />
           <br />
-          <button type="submit" id="btn2" onClick={handleClick2}>
+          <button type="submit" id="btn2" className='bs' onClick={handleClick2}>
             Sign Up
           </button>
         </div>

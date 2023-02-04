@@ -1,8 +1,11 @@
-.App {
-  background-color: rgb(172, 171, 248);
-  height:100vh;
+/* body{
+  height:100vh
+} */
+body {
+  background-color: rgb(241, 216, 206);
+  /* height:100vh; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   /* justify-content: center;
   align-items: center; */
@@ -15,6 +18,8 @@
   text-align: center;
   background-color: rgb(172, 168, 168);
   box-shadow: 0px 5px 5px 3px;
+  margin-top: 100px;
+  margin-left: 500px;
 }
 #input1{
   margin-top: 50px;
@@ -35,12 +40,13 @@
   margin-left: 5px;
 }
 input{
-  width: 200px;
+  width: 180px;
   height: 30px;
   border-radius: 20px;
   padding-left: 20px;
   border-bottom: 2px solid black;
   border: none;
+  font-size: 20px;
 }
 #btn{
   margin-top: 30px;
@@ -73,7 +79,105 @@ input{
   color: black;
 }
 #max{
-  transition: 3s ease-in-out;
-  transform: scale(1.01);
+
+  background-color: rgb(255, 255, 255);
 }
 
+.max{
+  position: relative;
+  width:300px;
+  height:300px;
+  text-align: center;
+  align-items: center;
+ border-radius: 20px;
+  box-shadow: 0px 5px 5px 4px;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  transition:0.2s ease-in-out
+ 
+}
+.max:hover{
+ 
+  transform: scale(1.05);
+}
+#product{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+  
+  
+}
+.btn{
+  margin-top: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+}
+.btns{
+  justify-content: space-between;
+  margin-left: 80px;
+}
+.search-input{
+  position: relative;
+  width:730px;
+  height:40px;
+  margin: 40px;
+  margin-left:300px;
+  border-left: 22px;
+  border: 2px solid rgb(18, 21, 37);
+  border-radius:0px 30px 30px 0px
+}
+#s{
+  width: 600px;
+  height: 38px;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  background-color: rgb(241, 216, 206);;
+}
+#s::placeholder{
+  font-size: 20px;
+  text-align: center;
+  color: tomato;
+}
+#mains{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(13, 13, 32);
+  color: rgb(238, 195, 116);
+  width:1320px
+  
+}
+.navbar{
+  display: inline-block;
+  text-decoration: none;
+}
+li{
+  display:inline;
+  margin:40px;
+  cursor:pointer;
+}
+.logo{
+  font-size: 35px;
+  font-weight: 700;
+}
+.Loading{
+  font-size: 25px;
+  margin-left:600px;
+  margin: top 100px;
+  font-weight: 700;
+}
+.fa-cart-plus{
+  width:20px;
+  height:20px;
+  color:rgb(255, 255, 255);
+  background-color: rgb(224, 178, 78);
+}
