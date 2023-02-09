@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BsCart4, BsInfoCircle, BsSearch } from "react-icons/bs";
-import { CgLogIn } from "react-icons/cg";
-import { MdAssignmentInd } from "react-icons/md";
+import ProDuct from './ProDuct'
+import Header from './Header'
+import { BsSearch } from "react-icons/bs";
+import Footer from './Footer'
+
 //If a user comes to this route then he must be logged In
 
 const Users = () => {
@@ -59,73 +61,7 @@ const Users = () => {
 
   return (
     <>
-      <div id="mains">
-        <div className="logo">
-          <span style={{ color: "blue", fontSize: "40px" }}>U</span>niquic
-          <span style={{ color: "red" }}>K</span>
-        </div>
-        <div className="navbar">
-          <ul>
-            <li>
-              Cart{" "}
-              <BsCart4
-                style={{
-                  color: "#ffffff",
-                  fontSize: "16px",
-                  position: "relative",
-                  top: "3px",
-                  left:'3px'
-                }}
-              />
-            </li>
-            <li>
-              Login{" "}
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontSize: "20px",
-                  textAlign: "center",
-                  position: "relative",
-                  top: "5px",
-                  left:'3px'
-                }}
-              >
-                <CgLogIn />
-              </span>
-            </li>
-            <li>
-              SignUp
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontSize: "20px",
-                  textAlign: "center",
-                  position: "relative",
-                  top: "5px",
-                  left:'3px'
-                }}
-              >
-                <MdAssignmentInd />
-              </span>
-            </li>
-            <li>
-              About
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontSize: "18px",
-                  textAlign: "center",
-                  position: "relative",
-                  top: "5px",
-                  left: "3px",
-                }}
-              >
-                <BsInfoCircle />
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Header />
       <div className="search-input">
       <label for='s' style={{fontSize:'18px',paddingLeft:'3px',paddingRight:'3px',}}>Search</label>
       <input
@@ -138,26 +74,12 @@ const Users = () => {
       <span style={{paddingLeft:'5px'}}><BsSearch/></span>
       </div>
       {loading === true ? <p className="Loading">Loading...</p> : <></>}
+
       <div id="product">
         {products.products
           ? products.products.map((product) => {
               return (
-                <>
-                  <div>
-                    <div key={product.id} className="max">
-                      <img
-                        src={product.thumbnail}
-                        style={{
-                          width: "200px",
-                          height: "200px",
-                          marginTop: "20px",
-                        }}
-                      />
-                      <h1 style={{ fontSize: "1px" }}>{product.title}</h1>
-                      <h1 style={{ fontSize: "15px" }}>$ {product.price}</h1>
-                    </div>
-                  </div>
-                </>
+                <ProDuct product={product} key={product.id}/>
               );
             })
           : null}
@@ -175,9 +97,11 @@ const Users = () => {
                 {page}
               </button>
             </span>
+            
           </>
         );
       })}
+      <Footer />
     </>
   );
 };
