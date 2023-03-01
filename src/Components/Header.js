@@ -21,7 +21,7 @@ const Header=()=>{
                   color: "#ffffff",
                   fontSize: "16px",
                   position: "relative",
-                  top: "3px",
+                  top: "1px",
                   left:'3px'
                 }}
               />
@@ -36,7 +36,7 @@ const Header=()=>{
                   fontSize: "20px",
                   textAlign: "center",
                   position: "relative",
-                  top: "5px",
+                  top: "2px",
                   left:'3px'
                 }}
               >
@@ -53,7 +53,7 @@ const Header=()=>{
                   fontSize: "20px",
                   textAlign: "center",
                   position: "relative",
-                  top: "5px",
+                  top: "2px",
                   left:'3px'
                 }}
               >
@@ -70,7 +70,7 @@ const Header=()=>{
                   fontSize: "18px",
                   textAlign: "center",
                   position: "relative",
-                  top: "5px",
+                  top: "2px",
                   left: "3px",
                 }}
               >

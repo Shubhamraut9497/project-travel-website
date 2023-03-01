@@ -1,9 +1,12 @@
 import React from 'react';
-
-const Cart=()=>{
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+ const Cart=()=>{
+    
     return (
-        <>
-        <h1>Hello</h1>
-        </>
+       <>
+
+       </>
     )
 }
+export default Cart;

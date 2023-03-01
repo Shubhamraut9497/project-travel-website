@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ProDuct from './ProDuct'
-import Header from './Header'
+import ProDuct from "./ProDuct";
+import Header from "./Header";
 import { BsSearch } from "react-icons/bs";
-import Footer from './Footer'
+import Footer from "./Footer";
+import "./Users.css";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+
 
 //If a user comes to this route then he must be logged In
 
 const Users = () => {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState(null);
@@ -34,7 +39,7 @@ const Users = () => {
         setProducts(json);
       });
   }
-
+  console.log(products);
   useEffect(() => {
     fetchNewRecords(1);
   }, [search]);
@@ -63,15 +68,18 @@ const Users = () => {
     <>
       <Header />
       <div className="search-input">
-      <label for='s' style={{fontSize:'18px',paddingLeft:'3px',paddingRight:'3px',}}>Search</label>
-      <input
-        type="text"
-        placeholder="Search Item Here"
-        value={search}
-        onChange={handleSearch}
-        id="s"
-      />
-      <span style={{paddingLeft:'5px'}}><BsSearch/></span>
+        <InputGroup className="mb-3">
+          <InputGroup.Text id="basic-addon1">
+            <BsSearch />
+          </InputGroup.Text>
+          <Form.Control
+            placeholder="Enter product name here"
+            aria-label=""
+            aria-describedby="basic-addon1"
+            value={search}
+            onChange={handleSearch}
+          />
+        </InputGroup>
       </div>
       {loading === true ? <p className="Loading">Loading...</p> : <></>}
 
@@ -79,7 +87,10 @@ const Users = () => {
         {products.products
           ? products.products.map((product) => {
               return (
-                <ProDuct product={product} key={product.id}/>
+                <ProDuct
+                  product={product}
+                  key={product.id}
+                />
               );
             })
           : null}
@@ -97,7 +108,6 @@ const Users = () => {
                 {page}
               </button>
             </span>
-            
           </>
         );
       })}

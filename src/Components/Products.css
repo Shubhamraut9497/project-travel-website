@@ -1,0 +1,33 @@
+.product-details{
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+
+}
+
+.btns{
+    width:120px;
+    height: 40px;
+    color:white;
+    background-color: orange;
+    border: none;
+}
+.btnc{
+    width:120px;
+    height: 40px;
+    color:white;
+    background-color: orangered;
+    border: none;
+}
+#items{
+    display: block;
+    margin-left: 30px;
+    text-align: center;
+    width:400px;
+  }
+  .bss{ 
+    border:none;
+    background-color:orange;
+    color:white;
+    border-radius: 10px;
+  }

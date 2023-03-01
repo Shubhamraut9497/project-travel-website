@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
-import { FaFastBackward } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Footer from './Footer'
+import {AiOutlineShoppingCart} from "react-icons/ai"
+import {BsFillLightningFill} from 'react-icons/bs'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button  from 'react-bootstrap/Button'
 
 const Products = () => {
   const params = useParams();
@@ -32,19 +35,21 @@ const Products = () => {
   return (
     <>
       <Header />
+      {loading?<h1 id="loading2">Loading...</h1>:<>
       <Link to={"/"}>
         <p style={{margin:'5px'}}>Back To Shopping</p>
       </Link>
       <div id="product-details">
-        <div>
+        <div className="imgs">
           
           <img
             src={singleProduct.thumbnail}
             alt="thumbnail"
             width={350}
             height={350}
-          />
-          
+          /><br/>
+          <button className="btns" variant="danger"><AiOutlineShoppingCart/> Add to Cart</button>
+          <button className="btnc"><BsFillLightningFill/>Buy Now</button>
         </div>
         <div id="items">
           <h1 style={{ color: "GrayText" }}>{singleProduct.title}</h1>
@@ -85,6 +90,8 @@ const Products = () => {
         </div>
       </div>
       <Footer/>
+      </>}
+      
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+
 const Login = () => {
+  const navigate=useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -15,31 +17,9 @@ const Login = () => {
   const handleClick = () => {
     if (username === "" || password === "") {
       setError("All fields are Mandatory");
-    } else {
-      var myHeader = new Headers();
-      myHeader.append("Content-Type", "application/json");
-
-      var body = JSON.stringify({
-        "username": username,
-        "password": password,
-      });
-      
-      var requestOptions = {
-        method: "POST",
-        headers: myHeader,
-        body: body,
-      };
-      fetch("https://fakestoreapi.com/auth/login", requestOptions)
-        .then((response) => response.json())
-        .then((result) => {
-          if (result.token) {
-            localStorage.setItem("login-token", result.token);
-            alert("Login Successfull");
-          } else {
-            setError("Invalid credentials");
-          }
-        })
-        .catch((error) => console.log("error", error));
+    }
+    if(localStorage.getItem("email")===username && localStorage.getItem("password")===password){
+      navigate("/")
     }
   };
 

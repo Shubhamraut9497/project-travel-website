@@ -1,7 +1,8 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import './SignUp.css'
 const SignUp = () => {
+  const navigate=useNavigate();
   const [Name, setName] = useState("");
   const [email, setEmail] = useState("");   
   const [password, setPassword] = useState("");
@@ -25,6 +26,7 @@ const SignUp = () => {
     errors();
     localStorage.setItem("email",email);
     localStorage.setItem("password",password);
+    navigate("/");
   };
 
   return (

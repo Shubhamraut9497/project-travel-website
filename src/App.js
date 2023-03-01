@@ -5,6 +5,7 @@ import Users from "./Components/Users";
 import Products from "./Components/Products";
 import About from './Components/About';
 import Cart from './Components/Cart';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

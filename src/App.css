@@ -102,8 +102,7 @@ input{
   
 }
 .btn{
-  margin-top: 30px;
-  width: 30px;
+  width: 120px;
   height: 30px;
   background-color: black;
   color: white;
@@ -126,13 +125,7 @@ input{
   /* border: 2px solid rgb(18, 21, 37); */
   /* border-radius:0px 30px 30px 0px */
 }
-#s{
-  width: 600px;
-  height: 38px;
-  border:2px solid black;
-  border-radius: 0px 20px 20px 0px;
-  background-color: rgb(241, 216, 206);;
-}
+
 #s::placeholder{
   font-size: 20px;
   text-align: center;
@@ -179,12 +172,6 @@ li{
   align-items:center ;
   margin: 60px;
   margin-top: 60px;
-}
-#items{
-  display: block;
-  margin-left: 30px;
-  text-align: center;
-  width:400px;
 }
 #loading2{
   margin-top:300px;
