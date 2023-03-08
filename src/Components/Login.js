@@ -18,9 +18,9 @@ const Login = () => {
     if (username === "" || password === "") {
       setError("All fields are Mandatory");
     }
-    if(localStorage.getItem("email")===username && localStorage.getItem("password")===password){
-      navigate("/")
-    }
+    // if(localStorage.getItem("email")===username && localStorage.getItem("password")===password){
+    //   navigate("/")
+    // }
   };
 
   return (
