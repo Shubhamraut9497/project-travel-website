@@ -7,11 +7,13 @@ const SignUp = () => {
   const [email, setEmail] = useState("");   
   const [password, setPassword] = useState("");
   const [error,setError]=useState('');
-  const errors=()=>{
-    if(!Name || !email || !password){
-      setError("Please Fill required Information")
+  const errors = () => {
+    if (!Name || !email || !password) {
+      setError("All fields are mandatory");
+    } else if (password.length < 6) {
+      setError("Password should be at least 6 characters long");
     }
-  }
+  };
   
   const handleName = (e) => {
     setName(e.target.value);

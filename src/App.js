@@ -18,13 +18,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Users />} />
-          <Route path={"/login"} element={<Login />} />
           <Route path={"/signup"} element={<SignUp />} />
           <Route path='/products/:id' element={<Products/>}/>
           <Route path={'/about'} element={<About/>}/>
           <Route path={'/cart'} element ={<Cart />} />
           <Route path={'/payment'} element={<Payment/>}/>
           <Route path={'/Success'} element={<Success/>}/>
+          <Route path={"/login"} element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>

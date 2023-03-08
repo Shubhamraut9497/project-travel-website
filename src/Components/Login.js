@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  //   const [user, setUser] = useState([]);
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
   };
+
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
+
   const handleClick = () => {
     if (username === "" || password === "") {
-      setError("All fields are Mandatory");
-    }
-    if(localStorage.getItem("email")===username && localStorage.getItem("password")===password){
-      navigate("/")
+      setError("All fields are mandatory");
+    } else if (
+      localStorage.getItem("email") === username &&
+      localStorage.getItem("password") === password
+    ) {
+      navigate("/");
+    } else {
+      setError("Invalid credentials");
     }
   };
 
@@ -28,7 +33,7 @@ const Login = () => {
       <div className="login">
         <div className="mini">
           <h1>Log In</h1>
-          <label for="input1">Username : </label>
+          <label htmlFor="input1">Username : </label>
           <input
             placeholder="Username"
             id="input1"
@@ -36,7 +41,7 @@ const Login = () => {
             onChange={handleUsername}
           />
           <br></br>
-          <label for="input2">Password : </label>
+          <label htmlFor="input2">Password : </label>
           <input
             type="password"
             placeholder="password"
