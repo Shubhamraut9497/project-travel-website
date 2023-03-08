@@ -13,20 +13,6 @@ const Header=()=>{
         </div>
         <div className="navbar">
           <ul>
-            <Link to ={'/cart'} className="shu">
-            <li>
-              Cart
-              <BsCart4
-                style={{
-                  color: "#ffffff",
-                  fontSize: "16px",
-                  position: "relative",
-                  top: "1px",
-                  left:'3px'
-                }}
-              />
-            </li>
-            </Link>
             <Link to ={"/login"} className="shu">
             <li>
               Login{" "}

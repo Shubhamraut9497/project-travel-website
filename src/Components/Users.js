@@ -103,7 +103,7 @@ const Users = () => {
                 onClick={() => {
                   fetchNewRecords(page);
                 }}
-                className="btn"
+                className="btnd"
               >
                 {page}
               </button>

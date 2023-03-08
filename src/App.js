@@ -5,6 +5,8 @@ import Users from "./Components/Users";
 import Products from "./Components/Products";
 import About from './Components/About';
 import Cart from './Components/Cart';
+import Payment from './Components/Payment';
+import Success from './Components/Success'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css";
@@ -21,6 +23,8 @@ function App() {
           <Route path='/products/:id' element={<Products/>}/>
           <Route path={'/about'} element={<About/>}/>
           <Route path={'/cart'} element ={<Cart />} />
+          <Route path={'/payment'} element={<Payment/>}/>
+          <Route path={'/Success'} element={<Success/>}/>
         </Routes>
       </BrowserRouter>
     </div>

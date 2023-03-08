@@ -7,8 +7,10 @@ import {AiOutlineShoppingCart} from "react-icons/ai"
 import {BsFillLightningFill} from 'react-icons/bs'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button  from 'react-bootstrap/Button'
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate=useNavigate();
   const params = useParams();
   const [singleProduct, setSingleProduct] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -48,8 +50,7 @@ const Products = () => {
             width={350}
             height={350}
           /><br/>
-          <button className="btns" variant="danger"><AiOutlineShoppingCart/> Add to Cart</button>
-          <button className="btnc"><BsFillLightningFill/>Buy Now</button>
+         
         </div>
         <div id="items">
           <h1 style={{ color: "GrayText" }}>{singleProduct.title}</h1>
@@ -87,6 +88,7 @@ const Products = () => {
             <span style={{ color: "black" }}>Description</span> :
             {singleProduct.description}
           </p>
+          <button className="btnc" onClick={()=>navigate('/payment')}><BsFillLightningFill/>Buy Now</button>
         </div>
       </div>
       <Footer/>

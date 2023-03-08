@@ -25,7 +25,6 @@ const ProDuct=(props)=>{
             <h1 style={{ fontSize: "12px" }}>{props.product.title}</h1>
             <h1 style={{ fontSize: "15px" }}>$ {props.product.price}</h1>
             </Link>
-            <button className="bss" onClick={addData}>Add to Cart</button>
           </div>
         </div>
         
